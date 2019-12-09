@@ -1,0 +1,58 @@
+git config --global user.name "Your Name"                             			Add your name to the global Git configuration
+	
+git config --global user.email "Your E-mail Address"							Add your email address to the global Git configuration
+
+git config --list 																Display all the Git configurations
+
+git config user.name															Display the user.name configuration value
+
+git config user.email															Display the user.email configuration value
+
+**git help -a																		Print all available Git commands
+
+**git help -g																		Print all available Git guides
+
+git help glossary																Display the Git glossary	
+
+git init																		Initialize a Git repository in the current directory
+
+git status																		Display status of current directory, as it relates to Git
+
+**git add FILE																	Start tracking FILE in Git; adds FILE to the staging area
+
+**git commit -m MSG																Commit changes to the Git repository, with a message (in quotes)
+
+git log																			Display the log (history) of the Git repository
+
+git log --stat																	Display the log with the files that were modified
+
+git ls-files																	List the files in the repository
+
+***git status -s																display the status of files in short notation form. 
+																				short form notations are:  ?? - untracked  A - ADD   M - Modified
+	
+git gui																			Start Git GUI
+
+git citool																		Start Git GUI to commit changes
+
+***gitk																			Start gitk (git log viewer)
+
+***git commit -m "Message"															Commit changes with the log message entered on command line via the -m switch
+
+**git diff																		Show any changes between the tracked files in the current directory and the repository
+
+***git commit -a -m "Message"														Perform a git add, and then a git commit with the supplied log message
+
+git diff –staged																Show any changes between the staging area and the repository
+
+git add																			Add all new files in the current directory (use git status afterward to see what was added)
+
+***git log –shortstat –oneline													Show history using one line per commit, and listing each file changed per commit
+
+git add –dry-run .																Show what git add would do
+
+
+
+		
+
+
