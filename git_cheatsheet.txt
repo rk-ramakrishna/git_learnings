@@ -51,6 +51,11 @@ git add																			Add all new files in the current directory (use git st
 
 git add –dry-run .																Show what git add would do
 
+git remote add origin https://github.com/rk-ramakrishna/git_learnings.git		set remote repository
+
+git push -u origin master														push local repository changes to remote repository
+
+
 
 
 		
