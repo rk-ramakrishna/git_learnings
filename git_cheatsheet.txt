@@ -30,7 +30,9 @@ git ls-files																	List the files in the repository
 
 ***git status -s																display the status of files in short notation form. 
 																				short form notations are:  ?? - untracked  A - ADD   M - Modified
-	
+
+git status -b 																	displays number of commits which are ahead of Head
+																				
 git gui																			Start Git GUI
 
 git citool																		Start Git GUI to commit changes
