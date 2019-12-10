@@ -43,7 +43,8 @@ git citool																		Start Git GUI to commit changes
 
 **git diff																		Show any changes between the tracked files in the current directory and the repository
 
-***git commit -a -m "Message"														Perform a git add, and then a git commit with the supplied log message
+***git commit -a -m "Message"													Perform a git add, and then a git commit with the supplied log message
+Note: caveat with the -a -m shortcut is that it will not work for new content or files. The first time a file is added to Git, it must have the git add command done first.
 
 git diff –staged																Show any changes between the staging area and the repository
 
