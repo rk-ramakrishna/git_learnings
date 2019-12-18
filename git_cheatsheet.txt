@@ -65,9 +65,13 @@ git reset file
 git status																		Display status of current working directory, as it relates to Git
 
 git status -s 																	Display status of files in short notation form 
-																				short form notations are:  ?? - untracked  A - ADD   M - Modified		
+																				short form notations are:  ?? - untracked  A - ADD   M - Modified
+
+git status -b 																	displays number of commits which are ahead of Head																				
 
 git commit -m "commit message"													commit changes to GIT repository with supplied log message
+
+git commit -i <name of the file> -m "commit message"                            commit only selected files
 
 git commit -am "commit message"													Perform git add and then a git commit with supplied log message
 Note:
@@ -88,29 +92,40 @@ git log																			Display the log (history) of the Git repository
 
 git log --stat																	Display the log with the files that were modified
 
+git log --stat --oneline
+
+git log --parents
+
+git log --oneline src/main/resources/application.yml
+
+git log -n 3
+
+git rev-parse HEAD
+
+git rev-parse <<branch-name>>
+Note: git rev-parse and git show has lot of functionality like git log
+
+git show --name--only 45893EQQ
+
+
 git ls-files																	List the files in the repository
 
-***git status -s																display the status of files in short notation form. 
-																				short form notations are:  ?? - untracked  A - ADD   M - Modified
 
-git status -b 																	displays number of commits which are ahead of Head
 																				
-git gui																			Start Git GUI
+
+																				
+																				
+																				
+																				
+																				git gui																			Start Git GUI
 
 git citool																		Start Git GUI to commit changes
 
 ***gitk																			Start gitk (git log viewer)
 
-***git commit -m "Message"															Commit changes with the log message entered on command line via the -m switch
-
 **git diff																		Show any changes between the tracked files in the current directory and the repository
 
-***git commit -a -m "Message"													Perform a git add, and then a git commit with the supplied log message
-Note: caveat with the -a -m shortcut is that it will not work for new content or files. The first time a file is added to Git, it must have the git add command done first.
-
 git diff –staged																Show any changes between the staging area and the repository
-
-git add																			Add all new files in the current directory (use git status afterward to see what was added)
 
 ***git log –shortstat –oneline													Show history using one line per commit, and listing each file changed per commit
 
