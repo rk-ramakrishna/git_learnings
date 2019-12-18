@@ -1,3 +1,15 @@
+
+Note:
+BASH stands for Bourne-Again shell
+
+Note:
+If you want to go through multiple pages in command line, use 'space' key and for quit use key 'q'
+
+GIT command syntax:
+========================
+git <git-options> <command> <command-options> <operands>
+
+
 GIT configuration settings
 =============================================
 
@@ -33,14 +45,44 @@ git <<command>>  -h																Display all options of command in Bash
 Example:  git config -h 
 
 
+Add, Delete & Track changes with GIT
+=======================================
 
 git init																		Initialize a Git repository in the current directory
 
-git status																		Display status of current directory, as it relates to Git
+git add FILE																	Start tracking FILE in Git; adds FILE to the staging area
 
-**git add FILE																	Start tracking FILE in Git; adds FILE to the staging area
+git add -f 																		pick part of your changes to add to staging area
 
-**git commit -m MSG																Commit changes to the Git repository, with a message (in quotes)
+git add . 																		To Add all changes in current & sub directory to staging area
+
+git rm --cached file 															Remove file from staging area. Note: Removed file still avilable in working directory
+
+git rename file1 file2															Rename file1 to file2 in the staging area
+
+git reset file																	
+
+git status																		Display status of current working directory, as it relates to Git
+
+git status -s 																	Display status of files in short notation form 
+																				short form notations are:  ?? - untracked  A - ADD   M - Modified		
+
+git commit -m "commit message"													commit changes to GIT repository with supplied log message
+
+git commit -am "commit message"													Perform git add and then a git commit with supplied log message
+Note:
+Above command only works for files which are already tracked by GIT. Above command would not work files which are newly added in working directory, but not added to staging area
+
+
+git commit --amend -m "commit message"											Update the last commit in git repository with whatever content currently avilable in staging area. 
+																				If no updates avilable in staging area, then only the commit message updated
+Note: It is not recommended to amend content that has already been pushed to a remote repository where others may be working with it. Operations that rewrite history such as amend 
+ideally only be done in your local enviornment before content is initially pushed to the remote repository.
+
+
+
+Findout History of commits [git log command has lot of functionality]
+================================================================================
 
 git log																			Display the log (history) of the Git repository
 
