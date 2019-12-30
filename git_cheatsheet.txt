@@ -5,6 +5,13 @@ BASH stands for Bourne-Again shell
 Note:
 If you want to go through multiple pages in command line, use 'space' key and for quit use key 'q'
 
+Symbolic names in GIT
+========================
+HEAD: HEAD is a pointer or reference to a SHA1—the SHA1 for the latest commit on the current branch.
+Cache or Index:  Cache or Index are used to reference the staging area
+
+
+
 GIT command syntax:
 ========================
 git <git-options> <command> <command-options> <operands>
@@ -66,6 +73,12 @@ git status																		Display status of current working directory, as it r
 
 git status -s 																	Display status of files in short notation form 
 																				short form notations are:  ?? - untracked  A - ADD   M - Modified
+Tracked files:
+Files which are known by GIT, means atleast it maintains single version of file
+UnTraced files:
+Files which are unknown to GIT, means no version of file exist in GIT
+
+Note: GIT status command displays the tracked & untracked files
 
 git status -b 																	displays number of commits which are ahead of Head																				
 
@@ -75,7 +88,7 @@ git commit -i <name of the file> -m "commit message"                            
 
 git commit -am "commit message"													Perform git add and then a git commit with supplied log message
 Note:
-Above command only works for files which are already tracked by GIT. Above command would not work files which are newly added in working directory, but not added to staging area
+Above command only works for files which are already tracked by GIT. Above command would not work for files which are newly added in working directory and not staged.
 
 
 git commit --amend -m "commit message"											Update the last commit in git repository with whatever content currently avilable in staging area. 
@@ -84,60 +97,88 @@ Note: It is not recommended to amend content that has already been pushed to a r
 ideally only be done in your local enviornment before content is initially pushed to the remote repository.
 
 
+Diff files	{ git diff [options] [<commit>] [--] [<path>...]  |  git diff [options] --cached [<commit>] [--] [<path>...]  |  git diff [options] <commit> <commit> [--] [<path>...] }
+======================================================================================================================================================================================
+git diff																		Show any changes between the tracked files in the current directory and the local repository
 
-Findout History of commits [git log command has lot of functionality]
+git diff –staged																Show any changes between the staging area and the repository
+Note:  git diff is a bit tricky. Comparsion of files typicllay based on below work flow
+1. git starts comparing file xxxx in working directory with file xxxx in staging area. If file xxxx not exist in staging area, then it compares xxxx file avilable in local repository.
+2. If user wants to compar file xxxx in staging area with xxxx in local repository, user should use command git diff --staged xxxx
+Please make a note that, different versions of files in different levels. so while using diff command, you have to understand files and their levels.
+
+git diff c344553  w3232323													 	Shows difference between two commits 
+
+git diff c344553  w3232323 build.gradle											Shows difference between the file build.gradle of provided two snapshots
+
+git diff c344553 HEAD 															Shows differences between snapshots c344553 and HEAD
+
+git diff c344553 master 														Shows differences between snapshots c344553 and latest commit in master
+
+git diff --name-only															Shows only names of the files that are different
+
+git diff --name-status 															Shows only names of the files that are different along with status 
+
+
+Visual diffing
+================
+git diff shows the differences in default format called patch format. While you are focusing primarily command line usage, 
+there are times when a visual interface adds significant value or convenience. One of these cases is diffing.  To invoke the diffing tool, you run the command git difftool.
+Git comes preconfigured to be able to work with a number of different tools for diffing. To see a list of these tools, you can run the command git difftool --tool-help.
+
+Use below commands to configure Beyond compare is default compare tool 
+
+git config --global difftool.bc3.path "C:\Program Files\Beyond Compare 4\BCompare.exe"     									To configure difftool path 
+
+git config --global diff.tool bc3																							Tell to GIT to use bc3 as difftool for files comparsion
+
+
+Find out History of commits [git log command has lot of functionality]
 ================================================================================
 
 git log																			Display the log (history) of the Git repository
 
-git log --stat																	Display the log with the files that were modified
+git log --stat																	shows some statistics on the number of changes (the number of inserted lines, deleted lines, and so on).
 
-git log --stat --oneline
+git log --stat --oneline														Display the log with statitical information in one line
 
-git log --parents
+git log --parents																Display each log and associated parent log 							
 
-git log --oneline src/main/resources/application.yml
+git log --oneline src/main/resources/application.yml							Display log of provided file name		
 
-git log -n 3
+git log -n 3																	Display logs of last 3 commits
 
-git rev-parse HEAD
+git rev-parse HEAD																Display the last commit of HEAD
 
-git rev-parse <<branch-name>>
-Note: git rev-parse and git show has lot of functionality like git log
+git rev-parse <<branch-name>>													Display the last commit in branch
+Note: git rev-parse and git show has lot of functionality like git log			
 
-git show --name--only 45893EQQ
+git log -4 --oneline --name-only												Displays last 4 snapshots file names with information in single line
 
+git log --since 30.12.2019 --until 01.01.2020  or								Time based logging
+git log --before 01.01.2020 --after 12.31.2019
+
+gitk																            Display history visually. GIT log viewer			
+
+git show --name--only 45893EQQ													
 
 git ls-files																	List the files in the repository
 
 
-																				
+Tags [A Tag is meaningful name provided to specific commit. For example, if you wanted to refer to a commit as 2.0x,use command: git tag 2.0x <SHA1 value>]
+================================================================================================================================================================
 
 																				
+
 																				
 																				
 																				
-																				git gui																			Start Git GUI
-
-git citool																		Start Git GUI to commit changes
-
-***gitk																			Start gitk (git log viewer)
-
-**git diff																		Show any changes between the tracked files in the current directory and the repository
-
-git diff –staged																Show any changes between the staging area and the repository
-
-***git log –shortstat –oneline													Show history using one line per commit, and listing each file changed per commit
-
-git add –dry-run .																Show what git add would do
-
+GIT Remote:
+==================================================																				
+																				
 git remote add origin https://github.com/rk-ramakrishna/git_learnings.git		set remote repository
 
 git push -u origin master														push local repository changes to remote repository
 
-
-
-
-		
-
-
+Note:
+Origin is the default name used by git for remote 
