@@ -167,7 +167,20 @@ git ls-files																	List the files in the repository
 
 Tags [A Tag is meaningful name provided to specific commit. For example, if you wanted to refer to a commit as 2.0x,use command: git tag 2.0x <SHA1 value>]
 ================================================================================================================================================================
+GIT provides two types of Tags
+1. Light weight tags
+2. Annotated tags 
 
+1. A lightweight tag is very much like a branch that doesn’t change. It’s just a pointer to a specific commit. Light weight tags are temparary tags
+2. Annotated tags contains all objects information like author, commit message etc. It is generally recommended to create & use the Annotated tags rather than light weight tags
+
+git tag -a v2.4x -m "Tagging the changes of 2.4x"								creates new tag with name "v2.4x"
+
+git tag --list 																	Listou all tags avilalbe in repository
+
+git show v2.4x 																	Display the tag information
+
+git tag v2.5x 																	creates new light weight tag with name "v2.5x"			 
 																				
 
 																				
