@@ -149,6 +149,8 @@ git log --oneline src/main/resources/application.yml							Display log of provid
 
 git log -n 3																	Display logs of last 3 commits
 
+git log --oneline --decorate --graph --all										Display logs in graphically way
+
 git rev-parse HEAD																Display the last commit of HEAD
 
 git rev-parse <<branch-name>>													Display the last commit in branch
@@ -196,18 +198,7 @@ git fetch --prune origin "+refs/tags/*:refs/tags/*"								Remove tags in local 
 
 GIT Branching
 =====================================================================================================================================================================
-Working with Branches in GIT is pretty easy and it is integral part of it. 
 
-Many git repository managers like GitLab and GitHub also allow for branches to be protected, which means that not everyone is allowed to just push changes there. 
-There the master is usually protected by default.						
-
-Following are major features of Branching apart from Merging
-
-1. Transplant a branch: Commits in a branch can be moved to another repository.
-
-2. Transfer certain changes only: Individual commits of a branch can be copied to another branch. This is called cherry-picking.
-
-3. Clean up history: A branch's history can be transformed, sorted and deleted. This would make the history better documentation for the project. This is called interactive rebasing.														
 																				
 																				
 GIT Remote:
