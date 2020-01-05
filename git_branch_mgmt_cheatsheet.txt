@@ -1,0 +1,15 @@
+GIT Branching
+=====================================================================================================================================================================
+
+git branch feature/Issue-14444													Creates a new feature branch in local repository with name "Issue-14444". 
+																				This new branch created by taking the source as currently pointed out branch when executing the command.
+
+git branch --list																Display the list of branches avilable with local repository
+git branch --all																Display the list of branches of local & remote repository
+git checkout <branch-name>														switch to provided branch 
+git checkout -b <branch-name>                                                   Single command to create and switch to new branch 
+Note:  Above command is combination of git brach <branch-name> && git checkout <branch-name>
+
+git branch -d <branch-name>														To delete the branch in local repository
+
+git push origin --delete <branch-name>											To delete the branch in remote repository
