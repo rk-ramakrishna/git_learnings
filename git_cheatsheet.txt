@@ -166,7 +166,7 @@ git show --name--only 45893EQQ
 git ls-files																	List the files in the repository
 
 
-Tags [A Tag is meaningful name provided to specific commit. For example, if you wanted to refer to a commit as 2.0x,use command: git tag 2.0x <SHA1 value>]
+Tags [A Tag provides meaningful name to specific commit. For example, if you wanted to refer to a commit as 2.0x,use command: git tag 2.0x <SHA1 value>]
 ================================================================================================================================================================
 GIT provides two types of Tags
 1. Light weight tags
@@ -187,14 +187,23 @@ git tag -d <tag-name>															To delete the tag in local repository
 
 git push origin :refs/tags/<tag-name> or git push origin --delete <tag-name>	To delete the remote tag															
 
+git fetch --prune origin "+refs/tags/*:refs/tags/*"								Remove tags in local repository which are nonexistent in remote repository
 
 
 GIT Branching
-========================================================
-Working with Branches in GIT is pretty easy and it is integral part of it 
+=====================================================================================================================================================================
+Working with Branches in GIT is pretty easy and it is integral part of it. 
 
 Many git repository managers like GitLab and GitHub also allow for branches to be protected, which means that not everyone is allowed to just push changes there. 
-There the master is usually protected by default.																				
+There the master is usually protected by default.						
+
+Following are major features of Branching apart from Merging
+
+1. Transplant a branch: Commits in a branch can be moved to another repository.
+
+2. Transfer certain changes only: Individual commits of a branch can be copied to another branch. This is called cherry-picking.
+
+3. Clean up history: A branch's history can be transformed, sorted and deleted. This would make the history better documentation for the project. This is called interactive rebasing.														
 																				
 																				
 GIT Remote:
