@@ -83,6 +83,7 @@ Note: GIT status command displays the tracked & untracked files
 git status -b 																	displays number of commits which are ahead of Head																				
 
 git commit -m "commit message"													commit changes to GIT repository with supplied log message
+Note: If you would like to provide more meaningful commit message, use git editor. 
 
 git commit -i <name of the file> -m "commit message"                            commit only selected files
 
@@ -186,7 +187,14 @@ git tag -d <tag-name>															To delete the tag in local repository
 
 git push origin :refs/tags/<tag-name> or git push origin --delete <tag-name>	To delete the remote tag															
 
-																				
+
+
+GIT Branching
+========================================================
+Working with Branches in GIT is pretty easy and it is integral part of it 
+
+Many git repository managers like GitLab and GitHub also allow for branches to be protected, which means that not everyone is allowed to just push changes there. 
+There the master is usually protected by default.																				
 																				
 																				
 GIT Remote:
