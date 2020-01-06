@@ -10,6 +10,7 @@ git checkout <branch-name>														switch to provided branch
 git checkout -b <branch-name>                                                   Single command to create and switch to new branch 
 Note:  Above command is combination of git brach <branch-name> && git checkout <branch-name>
 
-git branch -d <branch-name>														To delete the branch in local repository
+git push origin <branch-name>													Command to push newly created local branch to remote
 
+git branch -d <branch-name>														To delete the branch in local repository
 git push origin --delete <branch-name>											To delete the branch in remote repository
