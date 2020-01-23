@@ -52,6 +52,18 @@ git <<command>>  -h																Display all options of command in Bash
 Example:  git config -h 
 
 
+GIT Create
+==========================================
+git clone https://github.com/rk-ramakrishna/git_learnings.git
+clone an existing remote repository
+
+git init
+Create a new local repository
+
+
+
+
+
 Add, Delete & Track changes with GIT
 =======================================
 

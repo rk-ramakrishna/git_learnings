@@ -4,9 +4,11 @@
 ## Table of Contents
 
 
-* [GIT command syntax](#git_command_syntax)
-* [GIT help](#git_help)
-* [GIT configuration settings](#git_configuration_settings)
+* [GIT command syntax](#git-command-syntax)
+* [GIT help](#git-help)
+* [GIT configuration settings](#git-configuration-settings)
+* [GIT create](#git-create)
+* [GIT Add, Delete & Track changes](#git-add-delete-track-changes)
 
 <br/> <br/>
 
@@ -14,7 +16,7 @@
 ## GIT command syntax
 <br/>
 
-git **{git-options} {command} {command-options} {operands}**
+**git {git-options} {command} {command-options} {operands}**
 <br/>
 
  <p align="center">
@@ -39,8 +41,8 @@ Display all available Git guides
 Display the Git glossary																	
 <br/> <br/>
 
-**git <<command>>  -h**  <br/>
-Display all options of <<command>> in Bash																		
+**git {command}  -h**  <br/>
+Display all options of {command} in Bash																		
 Example:  git config -h 
 <br/> <br/>
  
@@ -93,3 +95,50 @@ Display the user.name configuration value
 Display the user.email configuration value
 <br/><br/>
  
+ 
+## GIT create
+<br/>
+
+**git clone** https://github.com/rk-ramakrishna/git_learnings.git  <br/>
+clone an existing remote repository
+<br/><br/>
+
+**git init** <br/>
+Create a new local repository
+<br/><br/>
+
+
+## GIT Add, Delete & Track changes
+<br/>
+
+**git add {FILE}** <br/>
+Start tracking {FILE} in Git; adds FILE to the staging area
+<br/><br/>
+
+**git add -f** <br/>
+pick part of your changes to add to staging area
+<br/><br/>
+
+**git add .** 					<br/>													
+To Add all changes in current & sub directory to staging area
+<br/><br/>
+
+
+**git rm --cached file** 			<br/>												
+Remove file from staging area. Note: Removed file still avilable in working directory
+<br/><br/>
+
+
+**git rename file1 file2**			<br/>
+Rename file1 to file2 in the staging area
+<br/><br/>
+
+
+**git status**						<br/>												
+Display status of current working directory, as it relates to Git
+<br/><br/>
+
+git status -s 							<br/>										
+Display status of files in short notation form. Short form notations are:  **?? - untracked  A - ADD   M - Modified**
+
+
