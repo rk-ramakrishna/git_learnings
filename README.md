@@ -7,7 +7,7 @@
 
 ## GIT command syntax
 
-**git <git-options> <command> <command-options> <operands>**
+git <git-options> <command> <command-options> <operands>
 
  <p align="center">
 	<img src="static/images/git_command_notes.PNG">
