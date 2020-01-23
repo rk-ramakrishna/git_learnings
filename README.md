@@ -8,7 +8,7 @@
 * [GIT help](#git-help)
 * [GIT configuration settings](#git-configuration-settings)
 * [GIT create](#git-create)
-* [GIT Add, Delete & Track changes](#git-add-delete-track-changes)
+* [GIT Add, Delete, Track changes](#git-add-delete-track-changes)
 
 <br/> <br/>
 
@@ -108,7 +108,7 @@ Create a new local repository
 <br/><br/>
 
 
-## GIT Add, Delete & Track changes
+## GIT Add, Delete, Track changes
 <br/>
 
 **git add {FILE}** <br/>
@@ -138,7 +138,56 @@ Rename file1 to file2 in the staging area
 Display status of current working directory, as it relates to Git
 <br/><br/>
 
-git status -s 							<br/>										
+**git status -s** 							<br/>										
 Display status of files in short notation form. Short form notations are:  **?? - untracked  A - ADD   M - Modified**
+<br/><br/>
+
+
+**Note**
+
+1. **Tracked files:**  <br/>
+   Files which are known by GIT, means atleast it maintains single version of file 
+   <br/><br/>
+   
+2. **UnTraced files:** <br/> 
+   Files which are unknown to GIT, means no version of file exist in GIT
+   <br/><br/>
+
+3. GIT status command displays the tracked & untracked files
+	<br/><br/>
+
+
+**git status -b**  <br/>
+Displays number of commits which are ahead of Head
+<br/><br/>																				
+
+
+**git commit -m "commit message"**					<br/>								
+Commit changes to GIT repository with supplied log message  <br/>
+
+**Note:** <br/> 
+If you would like to provide more meaningful commit message, use git editor. 
+<br/><br/>
+
+**git commit -i <name of the file> -m "commit message"** <br/>
+Commit only selected files
+<br/><br/>
+
+**git commit -am "commit message"** <br/>
+Perform git add and then a git commit with supplied log message <br/>
+
+**Note:**  <br/>
+Above command only works for files which are already tracked by GIT. Above command would not work for files which are newly added in working directory and not staged.
+<br/> <br/>
+
+**git commit --amend -m "commit message"**    <br/>
+Update the last commit in git repository with whatever content currently avilable in staging area. <br/> 
+If no updates avilable in staging area, then only the commit message updated.
+
+<br/>
+
+**Note:** <br/>
+It is not recommended to amend content that has already been pushed to a remote repository where others may be working with it. Operations that rewrite history such as amend 
+ideally only be done in your local enviornment before content is initially pushed to the remote repository.
 
 
