@@ -10,7 +10,8 @@
 * [GIT create](#git-create)
 * [GIT Add, Delete, Track changes](#git-add-delete-track-changes)
 * [GIT diff files](#git-diff-files)
-* [GIT visual diff files](#git-visual-diff-files)
+* [GIT visual diff files](#git-visual-diff-files
+* [Find out History of snapshots](#find-out-history-of-snapshots)
 
 <br/> <br/>
 
@@ -258,5 +259,58 @@ To configure difftool path    <br/> <br/>
 
 **git config --global diff.tool bc3**            <br/> 
 Tell to GIT to use bc3 as difftool for files comparsion             <br/> <br/> 
+
+
+
+## Find out History of snapshots
+<br/>
+
+**git log**   <br/>
+Display the log (history) of the Git repository   <br/><br/>
+
+
+**git log --stat**   <br/>
+shows some statistics on the number of changes (the number of inserted lines, deleted lines, and so on)    <br/><br/>
+
+
+**git log --stat --oneline** <br/>
+Display the log with statitical information in one line <br/><br/>
+
+**git log --parents**   <br/>
+Display each log and associated parent log 			  <br/><br/>				
+
+**git log --oneline src/main/resources/application.yml**     <br/>
+Display log of provided file name		          <br/><br/>
+
+**git log -n 3**           <br/>
+Display logs of last 3 commits                <br/><br/>
+
+**git log --oneline --decorate --graph --all**  <br/> 
+Display logs in graphically way       <br/><br/>
+
+**git rev-parse HEAD**           <br/>
+Display the last commit of HEAD      <br/><br/>
+
+**git rev-parse <<branch-name>>**			<br/>										
+Display the last commit in branch				<br/><br/>
+
+**Note:** git rev-parse and git show has lot of functionality like git log		<br/><br/>	
+
+**git log -4 --oneline --name-only**   <br/>
+Displays last 4 snapshots file names with information in single line   <br/><br/>	
+
+**git log --since 30.12.2019 --until 01.01.2020**           <br/><br/>	
+
+**git log --before 01.01.2020 --after 12.31.2019**          <br/><br/>	
+
+**gitk**        <br/>
+Display history visually. GIT log viewer			 <br/><br/>	
+
+**git show --name--only 45893EQQ**     <br/>	
+Display history visually. GIT log viewer			 <br/><br/>												
+
+**git ls-files**             		<br/>
+List the files in the repository           <br/><br/>
+
 
 
