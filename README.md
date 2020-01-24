@@ -10,7 +10,7 @@
 * [GIT create](#git-create)
 * [GIT Add, Delete, Track changes](#git-add-delete-track-changes)
 * [GIT diff files](#git-diff-files)
-* [GIT visual diff files](#git-visual-diff-files
+* [GIT visual diff files](#git-visual-diff-files)
 * [Find out History of snapshots](#find-out-history-of-snapshots)
 
 <br/> <br/>
