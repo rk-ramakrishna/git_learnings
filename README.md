@@ -230,20 +230,24 @@ Shows differences between snapshots c344553 and HEAD  <br/><br/>
 Shows differences between snapshots c344553 and latest commit in master       <br/><br/>
 
 
-**git diff --name-only**															
+**git diff --name-only**	  <br/>														
 Shows only names of the files that are different             <br/><br/>
 
-**git diff --name-status**
+**git diff --name-status**    <br/> 
 Shows only names of the files that are different along with status  <br/><br/>
 
 
 ## GIT visual diff files
 <br/>
 
-git diff shows the differences in default format called **patch format.** <br/>
-While you are focusing primarily command line usage,there are times when a visual interface adds significant value or convenience. <br/>
-One of these cases is diffing.  To invoke the diffing tool, you run the command **git difftool**.   <br/>
-Git comes preconfigured to be able to work with a number of different tools for diffing. To see a list of these tools, you can run the command **git difftool --tool-help**. <br/>
+* git diff shows the differences in default format called **patch format.** 
+
+* While you are focusing primarily command line usage,there are times when a visual interface adds significant value or convenience. <br/>
+  One of these cases is diffing.  To invoke the diffing tool, you run the command **git difftool**.   
+
+* Git comes preconfigured to be able to work with a number of different tools for diffing. 
+
+* To see a list of these tools, you can run the command **git difftool --tool-help**. <br/>
 
 **Note:** <br/>
 
