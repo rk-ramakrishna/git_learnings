@@ -9,6 +9,8 @@
 * [GIT configuration settings](#git-configuration-settings)
 * [GIT create](#git-create)
 * [GIT Add, Delete, Track changes](#git-add-delete-track-changes)
+* [GIT diff files](#git-diff-files)
+* [GIT visual diff files](#git-visual-diff-files)
 
 <br/> <br/>
 
@@ -189,5 +191,68 @@ If no updates avilable in staging area, then only the commit message updated.
 **Note:** <br/>
 It is not recommended to amend content that has already been pushed to a remote repository where others may be working with it. Operations that rewrite history such as amend 
 ideally only be done in your local enviornment before content is initially pushed to the remote repository.
+<br/><br/>
+
+
+
+ 
+## GIT diff files
+<br/>
+
+**git diff**  <br/>
+Show any changes between the tracked files in the current directory and the local repository
+<br/><br/>
+
+**git diff –staged** <br/>
+Show any changes between the staging area and the repository
+<br/><br/>
+
+**Note:**
+
+Git diff is a bit tricky. Comparsion of files typicllay based on below work flow <br/>
+
+1. Git starts comparing file xxxx in working directory with file xxxx in staging area. <br/>
+   If file xxxx not exist in staging area, then it compares xxxx file avilable in local repository. <br/><br/>
+   
+2. If user wants to compar file xxxx in staging area with xxxx in local repository, user should use command **git diff --staged xxxx**    <br/>
+   Please make a note that, different versions of files in different levels. so while using diff command, you have to understand files and their levels. <br/><br/>
+
+**git diff c344553  w3232323** <br/>
+Shows difference between two commits <br/> <br/> 
+
+**git diff c344553  w3232323 build.gradle**  <br/>
+Shows difference between the file build.gradle of provided two snapshots  <br/><br/>
+
+**git diff c344553 HEAD**  <br/>
+Shows differences between snapshots c344553 and HEAD  <br/><br/>
+
+**git diff c344553 master** <br/>
+Shows differences between snapshots c344553 and latest commit in master       <br/><br/>
+
+
+**git diff --name-only**															
+Shows only names of the files that are different             <br/><br/>
+
+**git diff --name-status**
+Shows only names of the files that are different along with status  <br/><br/>
+
+
+## GIT visual diff files
+<br/>
+
+git diff shows the differences in default format called **patch format.** <br/>
+While you are focusing primarily command line usage,there are times when a visual interface adds significant value or convenience. <br/>
+One of these cases is diffing.  To invoke the diffing tool, you run the command **git difftool**.   <br/>
+Git comes preconfigured to be able to work with a number of different tools for diffing. To see a list of these tools, you can run the command **git difftool --tool-help**. <br/>
+
+**Note:** <br/>
+
+Use below commands to configure Beyond compare is default compare tool  <br/> 
+
+**git config --global difftool.bc3.path "C:\Program Files\Beyond Compare 4\BCompare.exe"**     	<br/> 								
+To configure difftool path    <br/> <br/> 
+
+**git config --global diff.tool bc3**            <br/> 
+Tell to GIT to use bc3 as difftool for files comparsion             <br/> <br/> 
 
 
