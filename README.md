@@ -12,6 +12,7 @@
 * [GIT diff files](#git-diff-files)
 * [GIT visual diff files](#git-visual-diff-files)
 * [Find out History of snapshots](#find-out-history-of-snapshots)
+* [Tags](#tags)
 
 <br/> <br/>
 
@@ -311,6 +312,52 @@ Display history visually. GIT log viewer			 <br/><br/>
 
 **git ls-files**             		<br/>
 List the files in the repository           <br/><br/>
+
+
+# Tags
+
+<br/>
+
+**Note:** <br/>
+
+* Tag provides meaningful name to specific commit. For example, if you wanted to refer to a commit as 2.0x,use command: git tag 2.0x <SHA1 value>
+
+* GIT provides two types of Tags
+    * Light weight tags
+    * Annotated tags 
+
+* A lightweight tag is very much like a branch that doesn’t change. It’s just a pointer to a specific commit. Light weight tags are temparary tags
+* Annotated tags contains all objects information like author, commit message etc. It is generally recommended to create & use the Annotated tags rather than light weight tags
+
+
+**git tag -a v2.4x -m "Tagging the changes of 2.4x"** <br/>
+Creates new annotation type of tag with name "v2.4x"   <br/> <br/>
+
+**git tag v2.5x** <br/> 																	
+creates new light weight type of tag with name "v2.5x" <br/> <br/>			 
+
+**git tag -d <tag-name>**  <br/> 															
+To delete the tag in local repository   <br/><br/>
+
+**git tag --list**  <br/> 														
+Listout all tags avilalbe in repository   <br/> <br/>
+
+**git show v2.4x**  <br/>
+Display the tag information   <br/> <br/>
+
+**git push origin <tag-name>** <br/>
+To push the newly created tag available in local repository to remote repository  <br/>  <br/>
+
+
+**git push --tags**    <br/> 																
+To push all newly created tags in local repository to remote repository  <br/> <br/>
+
+
+**git push origin :refs/tags/<tag-name> or git push origin --delete <tag-name>** <br/>
+To delete the remote repository tag   <br/><br/>														
+
+**git fetch --prune origin "+refs/tags/*:refs/tags/*"**   <br/>
+Remove tags in local repository which are nonexistent in remote repository  <br/> <br/>
 
 
 
