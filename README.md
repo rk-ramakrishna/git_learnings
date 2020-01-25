@@ -328,13 +328,33 @@ List the files in the repository           <br/><br/>
 
 * A lightweight tag is very much like a branch that doesn’t change. It’s just a pointer to a specific commit. Light weight tags are temparary tags
 * Annotated tags contains all objects information like author, commit message etc. It is generally recommended to create & use the Annotated tags rather than light weight tags
-
+<br/> <br/>
 
 **git tag -a v2.4x -m "Tagging the changes of 2.4x"** <br/>
 Creates new annotation type of tag with name "v2.4x"   <br/> <br/>
 
 **git tag v2.5x** <br/> 																	
-creates new light weight type of tag with name "v2.5x" <br/> <br/>			 
+creates new light weight type of tag with name "v2.5x" <br/> <br/>
+
+**git tag v2.5x v2.6x** <br/>
+Rename lightweight tag v2.5x to v2.6x in local repository <br/> <br/>
+
+**Note:** 
+  * If tag v2.5x already exists in remote repository, then it is required to delete old tag v2.5x and push new tag v2.6x to remote repository
+  * git tag -d v2.5x  
+  * git push origin --delete v2.5x
+  * git push origin v2.6x
+  * Inform to other team members to refer newly created tag v2.6x  by executing the git command  **git pull --prune --tags**
+
+
+**git tag -a v3.4x v2.4x^{}** <br/>
+Rename annotation tag v2.4x to v3.4x  <br/>  <br/>
+
+**Note:**
+  * Note the syntax ^{} at the end of the command. For annotation tag this syntax is required. 
+  * ^{} syntax enables to refer underlying commit[snapshot where old tag was created] instead of refering the old tag commit
+  * Refer this thread to get more details https://stackoverflow.com/questions/49283734/why-isnt-my-tag-listed-when-i-checkout-with-git-gui/49286861#49286861  
+  		 
 
 **git tag -d <tag-name>**  <br/> 															
 To delete the tag in local repository   <br/><br/>
