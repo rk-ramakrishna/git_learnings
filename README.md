@@ -396,7 +396,7 @@ Remove tags in local repository which are non-existent in remote repository  <br
 	* As branch management in GIT is fast & lightweight, Developers are encouraged to create and delete branches in their day to day work as needed 
 	
 	
-**git branch {branch-name}  <br/> 															
+**git branch {branch-name}**  <br/> 															
 Provision of new branch from HEAD <br/><br/>	
 
 **git checkout {branch-name}**  <br/> 															
@@ -408,19 +408,19 @@ Provision new branch from HEAD and checkout to working directory. This command i
 **git checkout {branch-name}**  <br/>
 Switch to branch {branch-name} from currently pointed out branch**   <br/> <br/>
 
-**Note:**  <br/> <br/>
+**Note:**  <br/>
    *  when switch from one branch to other branch GIT performs below activities
    *  your working directory updated with code base of checked out branch 
-   *  HEAD updated to refer commit id of checked out branch
+   *  HEAD updated to refer commit id of checked out branch  <br/> <br/>
 
 **git branch -m feature/RAPT-446 feature/RAPT-446-Handling of Logout**  <br/>
 Rename local branch from feature/RAPT-446 to feature/RAPT-446-Handling of Logout  <br/>
 
-**Note: <br/>
+**Note:** <br/>
    * To reflect the rename of branch in remote repository, follow below steps 
    * Delete old branch in local repository   **git branch -d feature/RAPT-446**
    * Delete old branch in remote repository   **git push origin --delete feature/RAPT-446**
-   * Push newly created branch in remote repository   ** git push origin feature/RAPT-446-Handling of Logout  <br/> <br/>
+   * Push newly created branch in remote repository   **git push origin feature/RAPT-446-Handling of Logout**  <br/> <br/>
    
 **git branch -d <branch-name>**					<br/>
 To delete the branch in local repository        <br/> <br/>
