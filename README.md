@@ -318,8 +318,6 @@ List the files in the repository           <br/><br/>
 
 <br/>
 
-**Note:** <br/>
-
 * Tag provides meaningful name to specific commit. For example, if you wanted to refer to a commit as 2.0x,use command: git tag 2.0x <SHA1 value>
 
 * GIT provides two types of Tags
@@ -327,7 +325,7 @@ List the files in the repository           <br/><br/>
     * Annotated tags 
 
 * A lightweight tag is very much like a branch that doesn’t change. It’s just a pointer to a specific commit. Light weight tags are temparary tags
-* Annotated tags contains all objects information like author, commit message etc. It is generally recommended to create & use the Annotated tags rather than light weight tags. <br/>
+* Annotated tags contains all objects information like author, commit message etc. It is generally recommended to create & use the Annotated tags rather than light weight tags. <br/><br/>
   **Note:**   <br/>
   * The difference between Annotation tags and lightweight tags is for Annotation tags seperate commit id created. 
   * But commit id of Annotation tag will not be shown in remote GIT. This is little strange
