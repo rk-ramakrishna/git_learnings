@@ -12,7 +12,8 @@
 * [GIT diff files](#git-diff-files)
 * [GIT visual diff files](#git-visual-diff-files)
 * [Find out History of snapshots](#find-out-history-of-snapshots)
-* [Tags](#tags)
+* [GIT Tags](#git-tags)
+* [GIT Branches](#git-branches)
 
 <br/> <br/>
 
@@ -76,12 +77,12 @@ To configure difftool path
 
 
 **git config --global diff.tool bc3**   <br/>
-Tell to GIT to use bc3 as difftool for files comparsion																							
+Tell to GIT to use bc3 as difftool for files comparison																							
 <br/><br/>
 
 
 **git config --global difftool.prompt false**  <br/>
-Tell to GIT don't prompt {yes or no} for each file comparsion
+Tell to GIT don't prompt {yes or no} for each file comparison
 <br/><br/>
 
 																					
@@ -129,7 +130,7 @@ To Add all changes in current & sub directory to staging area
 
 
 **git rm --cached file** 			<br/>												
-Remove file from staging area. Note: Removed file still avilable in working directory
+Remove file from staging area. Note: Removed file still available  in working directory
 <br/><br/>
 
 
@@ -153,7 +154,7 @@ Display status of files in short notation form. Short form notations are:  **?? 
    Files which are known by GIT, means atleast it maintains single version of file 
    <br/><br/>
    
-2. **UnTraced files:** <br/> 
+2. **Untracked  files:** <br/> 
    Files which are unknown to GIT, means no version of file exist in GIT
    <br/><br/>
 
@@ -185,14 +186,14 @@ Above command only works for files which are already tracked by GIT. Above comma
 <br/> <br/>
 
 **git commit --amend -m "commit message"**    <br/>
-Update the last commit in git repository with whatever content currently avilable in staging area. <br/> 
-If no updates avilable in staging area, then only the commit message updated.
+Update the last commit in git repository with whatever content currently available  in staging area. <br/> 
+If no updates available  in staging area, then only the commit message updated.
 
 <br/>
 
 **Note:** <br/>
 It is not recommended to amend content that has already been pushed to a remote repository where others may be working with it. Operations that rewrite history such as amend 
-ideally only be done in your local enviornment before content is initially pushed to the remote repository.
+ideally only be done in your local environment before content is initially pushed to the remote repository.
 <br/><br/>
 
 
@@ -211,10 +212,10 @@ Show any changes between the staging area and the repository
 
 **Note:**
 
-Git diff is a bit tricky. Comparsion of files typicllay based on below work flow <br/>
+Git diff is a bit tricky. Comparison of files typically  based on below work flow <br/>
 
 1. Git starts comparing file xxxx in working directory with file xxxx in staging area. <br/>
-   If file xxxx not exist in staging area, then it compares xxxx file avilable in local repository. <br/><br/>
+   If file xxxx not exist in staging area, then it compares xxxx file available  in local repository. <br/><br/>
    
 2. If user wants to compar file xxxx in staging area with xxxx in local repository, user should use command **git diff --staged xxxx**    <br/>
    Please make a note that, different versions of files in different levels. so while using diff command, you have to understand files and their levels. <br/><br/>
@@ -259,7 +260,7 @@ Use below commands to configure Beyond compare is default compare tool  <br/>
 To configure difftool path    <br/> <br/> 
 
 **git config --global diff.tool bc3**            <br/> 
-Tell to GIT to use bc3 as difftool for files comparsion             <br/> <br/> 
+Tell to GIT to use bc3 as difftool for files comparison      <br/> <br/> 
 
 
 
@@ -275,7 +276,7 @@ shows some statistics on the number of changes (the number of inserted lines, de
 
 
 **git log --stat --oneline** <br/>
-Display the log with statitical information in one line <br/><br/>
+Display the log with statistical  information in one line <br/><br/>
 
 **git log --parents**   <br/>
 Display each log and associated parent log 			  <br/><br/>				
@@ -314,7 +315,7 @@ Display history visually. GIT log viewer			 <br/><br/>
 List the files in the repository           <br/><br/>
 
 
-# Tags
+# GIT Tags
 
 <br/>
 
@@ -324,12 +325,12 @@ List the files in the repository           <br/><br/>
     * Light weight tags
     * Annotated tags 
 
-* A lightweight tag is very much like a branch that doesn’t change. It’s just a pointer to a specific commit. Light weight tags are temparary tags
+* A lightweight tag is very much like a branch that doesn’t change. It’s just a pointer to a specific commit. Light weight tags are temporary tags
 * Annotated tags contains all objects information like author, commit message etc. It is generally recommended to create & use the Annotated tags rather than light weight tags. <br/><br/>
   **Note:**   <br/>
-  * The difference between Annotation tags and lightweight tags is for Annotation tags seperate commit id created. 
+  * The difference between Annotation tags and lightweight tags is for Annotation tags separate commit id created. 
   * But commit id of Annotation tag will not be shown in remote GIT. This is little strange
-  * For lightweight tags GIT will not create any seperate commit id  
+  * For lightweight tags GIT will not create any separate commit id  
   
 <br/> <br/>
 
@@ -355,7 +356,7 @@ Rename annotation tag v2.4x to v3.4x  <br/>  <br/>
 
 **Note:**
   * Note the syntax ^{} at the end of the command. For annotation tag this syntax is required. 
-  * ^{} syntax enables to refer underlying commit[snapshot where old tag was created] instead of refering the old tag commit
+  * ^{} syntax enables to refer underlying commit[snapshot where old tag was created] instead of referring the old tag commit
   * Refer this thread to get more details https://stackoverflow.com/questions/49283734/why-isnt-my-tag-listed-when-i-checkout-with-git-gui/49286861#49286861  
   		 
 
@@ -363,10 +364,10 @@ Rename annotation tag v2.4x to v3.4x  <br/>  <br/>
 To delete the tag in local repository   <br/><br/>
 
 **git tag --list**  <br/> 														
-Listout all tags avilalbe in repository   <br/> <br/>
+List out all tags available  in repository   <br/> <br/>
 
 **git show-ref --tags** <br/>
-Listou tags along with commit id  <br/> <br/>
+List out tags along with commit id  <br/> <br/>
 
 **git show v2.4x**  <br/>
 Display the tag information   <br/> <br/>
@@ -383,7 +384,66 @@ To push all newly created tags in local repository to remote repository  <br/> <
 To delete the remote repository tag   <br/><br/>														
 
 **git fetch --prune origin "+refs/tags/*:refs/tags/*"**   <br/>
-Remove tags in local repository which are nonexistent in remote repository  <br/> <br/>
+Remove tags in local repository which are non-existent in remote repository  <br/> <br/>
 
 
 
+# GIT Branches
+
+	* GIT branches referred as local branch and remote branch. Local branches available in Local repository where as remote branches available in remote repository. <br/> <br/> 
+	* Provision of a new Branch in GIT very fast and light weight. This is just creation of identifier(branch name) with HEAD pointer
+	* GIT is more famous, because Branch management is GIT extremely fast compared to other SCM's like CVS and SVN
+	* As branch management in GIT is fast & lightweight, Developers are encouraged to create and delete branches in their day to day work as needed 
+	
+	
+**git branch {branch-name}  <br/> 															
+Provision of new branch from HEAD <br/><br/>	
+
+**git checkout {branch-name}**  <br/> 															
+checkout newly created branch to working directory <br/><br/>
+
+**git checkout -b {branch-name}**  <br/>
+Provision new branch from HEAD and checkout to working directory. This command is combination of above two commands <br/> <br/>
+
+**git checkout {branch-name}**  <br/>
+Switch to branch {branch-name} from currently pointed out branch**   <br/> <br/>
+
+**Note:**  <br/> <br/>
+   *  when switch from one branch to other branch GIT performs below activities
+   *  your working directory updated with code base of checked out branch 
+   *  HEAD updated to refer commit id of checked out branch
+
+**git branch -m feature/RAPT-446 feature/RAPT-446-Handling of Logout**  <br/>
+Rename local branch from feature/RAPT-446 to feature/RAPT-446-Handling of Logout  <br/>
+
+**Note: <br/>
+   * To reflect the rename of branch in remote repository, follow below steps 
+   * Delete old branch in local repository   **git branch -d feature/RAPT-446**
+   * Delete old branch in remote repository   **git push origin --delete feature/RAPT-446**
+   * Push newly created branch in remote repository   ** git push origin feature/RAPT-446-Handling of Logout  <br/> <br/>
+   
+**git branch -d <branch-name>**					<br/>
+To delete the branch in local repository        <br/> <br/>
+
+**git branch --list**  					<br/>
+Display list of branches available with local repository  <br/> <br/>
+
+**git branch --all**        		<br/>
+Display the list of branches of local & remote repository             <br/> <br/>
+
+**git branch --v**        		<br/>
+Display list of branches verbose information            <br/> <br/>
+
+
+**git push origin <branch-name>**          <br/>
+Command to push newly created local branch to remote repository      <br/> <br/>
+
+**git push origin --delete <branch-name>**  <br/>
+To delete branch in remote repository   <br/> <br/>
+
+
+
+
+   
+   
+	
