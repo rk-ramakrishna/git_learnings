@@ -394,6 +394,23 @@ Remove tags in local repository which are non-existent in remote repository  <br
 	* Provision of a new Branch in GIT very fast and light weight. This is just creation of identifier(branch name) with HEAD pointer
 	* GIT is more famous, because Branch management is GIT extremely fast compared to other SCM's like CVS and SVN
 	* As branch management in GIT is fast & lightweight, Developers are encouraged to create and delete branches in their day to day work as needed 
+	* Below are types of GIT branches
+	    * Topic Branches
+		* Feature Branches
+		* Release Branches 
+	* Topic branches meant for experimental and exploratory
+    * Generally Topic branches are short lived. There is no strict control mechanism required to maintain Topic branches 
+    * Quality gates to Topic branches are loosened
+	* Feature branches created for new features of product
+	* Feature branches code are merged into mainstream branch at some point of time in down the line
+	* Feature branches are short lived. Strict control mechanism and oversight required for feature branches as like mainstream branches
+	* Quality gates of Feature branches are like mainstream branches 
+	* Difference between Feature & Topic branches are Feature branches meant to add new features to existing product, where as Topic branches purpose is for experimental and
+      exploratory 
+	* Release branch code is final code of product 
+	* Very strict control mechanism required to merge or add code changes to Release branch 
+	* Matured Quality gates maintained for Release branches
+	
 	
 	
 **git branch {branch-name}**  <br/> 															
@@ -406,7 +423,7 @@ checkout newly created branch to working directory <br/><br/>
 Provision new branch from HEAD and checkout to working directory. This command is combination of above two commands <br/> <br/>
 
 **git checkout {branch-name}**  <br/>
-Switch to branch {branch-name} from currently pointed out branch**   <br/> <br/>
+Switch to branch {branch-name} from currently pointed out branch  <br/> <br/>
 
 **Note:**  <br/>
    *  when switch from one branch to other branch GIT performs below activities
