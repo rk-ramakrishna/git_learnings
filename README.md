@@ -396,26 +396,26 @@ Remove tags in local repository which are non-existent in remote repository  <br
 
 # GIT Branches
 
-	* GIT branches referred as local branch and remote branch. Local branches available in Local repository where as remote branches available in remote repository. <br/> <br/> 
-	* Provision of a new Branch in GIT very fast and light weight. This is just creation of identifier(branch name) with HEAD pointer
-	* GIT is more famous, because Branch management is GIT extremely fast compared to other SCM's like CVS and SVN
-	* As branch management in GIT is fast & lightweight, Developers are encouraged to create and delete branches in their day to day work as needed 
-	* Below are types of GIT branches
-	    * Topic Branches
-		* Feature Branches
-		* Release Branches 
-	* Topic branches meant for experimental and exploratory
-    * Generally Topic branches are short lived. There is no strict control mechanism required to maintain Topic branches 
-    * Quality gates to Topic branches are loosened
-	* Feature branches created for new features of product
-	* Feature branches code are merged into mainstream branch at some point of time in down the line
-	* Feature branches are short lived. Strict control mechanism and oversight required for feature branches as like mainstream branches
-	* Quality gates of Feature branches are like mainstream branches 
-	* Difference between Feature & Topic branches are Feature branches meant to add new features to existing product, where as Topic branches purpose is for experimental and
-      exploratory 
-	* Release branch code is final code of product 
-	* Very strict control mechanism required to merge or add code changes to Release branch 
-	* Matured Quality gates maintained for Release branches
+* GIT branches referred as local branch and remote branch. Local branches available in Local repository where as remote branches available in remote repository. <br/> <br/> 
+* Provision of a new Branch in GIT very fast and light weight. This is just creation of identifier(branch name) with HEAD pointer
+* GIT is more famous, because Branch management is GIT extremely fast compared to other SCM's like CVS and SVN
+* As branch management in GIT is fast & lightweight, Developers are encouraged to create and delete branches in their day to day work as needed 
+* Below are types of GIT branches
+    * Topic Branches
+	* Feature Branches
+	* Release Branches 
+* Topic branches meant for experimental and exploratory
+* Generally Topic branches are short lived. There is no strict control mechanism required to maintain Topic branches 
+* Quality gates to Topic branches are loosened
+* Feature branches created for new features of product
+* Feature branches code are merged into mainstream branch at some point of time in down the line
+* Feature branches are short lived. Strict control mechanism and oversight required for feature branches as like mainstream branches
+* Quality gates of Feature branches are like mainstream branches 
+* Difference between Feature & Topic branches are Feature branches meant to add new features to existing product, where as Topic branches purpose is for experimental and
+  exploratory 
+* Release branch code is final code of product 
+* Very strict control mechanism required to merge or add code changes to Release branch 
+* Matured Quality gates maintained for Release branches
 	
 	
 	
@@ -468,6 +468,13 @@ To delete branch in remote repository   <br/> <br/>
 
 # GIT Merging
 
+* Branching diverges code bases, and merging converges code bases
+* As shown in below figure we diverge the code base at commit B, making two branches: master and new_feature. We then make some commits on both branches. Next, using git merge,
+  we converge new_feature and master back together in commit F.
+  
+  <p align="center">
+	<img src="static/images/git_merge.PNG">
+  </p>	 
 
 **git mergetool**          <br/>
 Open a tool to help perform a merge between two conflicted branches.	<br/> <br/>
