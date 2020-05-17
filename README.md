@@ -14,6 +14,7 @@
 * [Find out History of snapshots](#find-out-history-of-snapshots)
 * [GIT Tags](#git-tags)
 * [GIT Branches](#git-branches)
+* [GIT Merging](#git-merging)
 
 <br/> <br/>
 
@@ -232,12 +233,17 @@ Shows differences between snapshots c344553 and HEAD  <br/><br/>
 **git diff c344553 master** <br/>
 Shows differences between snapshots c344553 and latest commit in master       <br/><br/>
 
-
 **git diff --name-only**	  <br/>														
 Shows only names of the files that are different             <br/><br/>
 
 **git diff --name-status**    <br/> 
 Shows only names of the files that are different along with status  <br/><br/>
+
+**git diff BRANCH1...BRANCH2**	  <br/>												
+Indicate the difference between BRANCH1 and BRANCH2 relative to when they first became different
+
+**git diff --name-status BRANCH1...BRANCH2**    <br/> 										
+Summarize the difference between BRANCH1 and BRANCH2, by listing each file and its status
 
 
 ## GIT visual diff files
@@ -460,7 +466,20 @@ To delete branch in remote repository   <br/> <br/>
 
 
 
+# GIT Merging
 
-   
+
+**git mergetool**          <br/>
+Open a tool to help perform a merge between two conflicted branches.	<br/> <br/>
+
+**git merge --abort**	   <br/>
+Abandon a merge between two conflicted branches.
+
+**git merge-base BRANCH1 BRANCH2**			<br/>
+Show the base commit between BRANCH1 and BRANCH2
+
+
+
+ 
    
 	

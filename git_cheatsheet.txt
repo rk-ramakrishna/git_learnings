@@ -132,6 +132,11 @@ git diff --name-only															Shows only names of the files that are differ
 
 git diff --name-status 															Shows only names of the files that are different along with status 
 
+git diff BRANCH1...BRANCH2														Indicate the difference between BRANCH1 and BRANCH2 relative to when they first became different
+
+git diff --name-status BRANCH1...BRANCH2										Summarize the difference between BRANCH1 and BRANCH2, by listing each file and its status
+
+
 
 Visual diffing
 ================
